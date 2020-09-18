@@ -4,12 +4,12 @@ type: php:7.4
 
 runtime:
     extensions:
+        - pdo_pgsql
         - apcu
         - mbstring
         - sodium
         - ctype
         - iconv
-        
 
 variables:
     php:
@@ -18,6 +18,9 @@ variables:
 
 build:
     flavor: none
+
+relationships:
+    database: "db:postgresql"
 
 web:
     locations:
@@ -36,7 +39,7 @@ hooks:
         set -x -e
 
         curl -s https://get.symfony.com/cloud/configurator | (>&2 bash)
-        
+
         (>&2 symfony-build)
 
     deploy: |
