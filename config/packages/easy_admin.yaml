@@ -10,6 +10,17 @@ easy_admin:
     entities:
         Conference:
             class: App\Entity\Conference
+            new:
+                fields:
+                    - { property: 'city'}
+                    - { property: 'year'}
+                    - { property: 'isInternational'}
+            edit:
+                fields:
+                    - { property: 'city'}
+                    - { property: 'year'}
+                    - { property: 'isInternational'}
+                    - { property: 'slug', type_options: { attr: { readonly: true } } }
 
         Comment:
             class: App\Entity\Comment
