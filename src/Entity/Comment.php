@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\CommentRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=CommentRepository::class)
@@ -111,6 +112,9 @@ class Comment
         return $this;
     }
 
+    /**
+     * @ORM\PrePersist
+     */
     public function setCreatedAtValue()
     {
         $this->createdAt = new \DateTime();
