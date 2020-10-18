@@ -11,9 +11,7 @@
 		Conference</h2>
 
 	{% if comments|length > 0 %}
-		<div>There are
-			{{comments|length}}
-			comments</div>
+		<div> There are {{comments|length}} comments</div>
 
 		{% for comment in comments %}
 			{% if comment.photofilename %}
@@ -40,5 +38,4 @@
 	{% endif %}
 	<h2>Add your own feedback</h2>
 
-	{{form(comment_form)}}
-{% endblock %}
+	{{form(comment_form)}}{% endblock %}
