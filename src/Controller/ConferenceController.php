@@ -11,6 +11,7 @@ use App\Repository\ConferenceRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Messenger\MessageBusInterface;
@@ -69,8 +70,11 @@ class ConferenceController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $comment->setConference($conference);
 
-            if ($photo = $form['photo']->getData()) {
-                $filename = bin2hex(random_bytes(6).'.'.$photo->guessExtension());
+            /** @var UploadedFile $photo */
+            $photo = $form->get('photo')->getData();
+
+            if ($photo) {
+                $filename = bin2hex(random_bytes(6)).'.'.$photo->guessExtension();
 
                 try {
                     $photo->move($photoDir, $filename);
