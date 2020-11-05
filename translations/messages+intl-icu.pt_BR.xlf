@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="pt-BR" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="LNAVleg" resname="Give your feedback!">
+        <source>Give your feedback!</source>
+        <target>Deixe seu comentário!</target>
+      </trans-unit>
+      <trans-unit id="3Mg5pAF" resname="View">
+        <source>View</source>
+        <target>Visualizar</target>
+      </trans-unit>
+      <trans-unit id="eOy4.6V" resname="Conference Guestbook">
+        <source>Conference Guestbook</source>
+        <target>Livro de convidados de Conferência</target>
+      </trans-unit>
+      <trans-unit id="7bokozx" resname="No comments have been posted yet for this conference.">
+        <source>No comments have been posted yet for this conference.</source>
+        <target>Ainda não postaram nenhum comentário para esta conferência.</target>
+      </trans-unit>
+      <trans-unit id="ilFYXWP" resname="Add your own feedback">
+        <source>Add your own feedback</source>
+        <target>Adicione o seu comentário</target>
+      </trans-unit>
+      <trans-unit id="LGsuJTw" resname="Your name">
+        <source>Your name</source>
+        <target>Seu nome</target>
+      </trans-unit>
+      <trans-unit id="cZiMTY4" resname="Text">
+        <source>Text</source>
+        <target>Texto</target>
+      </trans-unit>
+      <trans-unit id="lpzL089" resname="Email">
+        <source>Email</source>
+        <target>E-mail</target>
+      </trans-unit>
+      <trans-unit id="2E7rrak" resname="Photo">
+        <source>Photo</source>
+        <target>Foto</target>
+      </trans-unit>
+      <trans-unit id="FV_BbAQ" resname="Submit">
+        <source>Submit</source>
+        <target>Enviar</target>
+      </trans-unit>
+      <trans-unit id="maMQz7W" resname="nb_of_comments">
+        <source>nb_of_comments</source>
+        <target>{count, plural, =0 {Nenhum comentário.} =1 {1 comentário.} other {# comentários.}}</target>
+      </trans-unit>
+      <trans-unit id="QMLfTLl" resname="titulo_conferencia">
+        <source>titulo_conferencia</source>
+        <target>Conferência de {conference}</target>
+      </trans-unit>
+      <trans-unit id="KN80sEP" resname="titulo_conferencia_guestbook">
+        <source>titulo_conferencia_guestbook</source>
+        <target>Livro de convidados da Conferência - {conference}</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
